@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CompileMIT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navbar.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link rel="icon" href="https://media-hosting.imagekit.io/64ff49dede3c4a0e/logo.png?Expires=1839304913&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=bMeIY9PAXS~zpFPgrc~gJF680UX8J8efQP6nj1g8TzVFJtHT5p3cuyT0GFyVyMPPYSaRIkZW1GkpwnjwtlFw6LOEOHrFJ4d26FkX5yNFtZ1d1jgHoXtLdHEB-sPk6IK0jpxhB6JqbHL9gLnss2-YQ5E6MJqxpEqvmweGqtaWuesyJNboPCrya80Bl1pBtT5ey-07elTgcwlqv2~yAwQV9-7LxrcoySt4MxBPEpFaK2CIaWFNkHaUq1R6UUveY5bcJoCH06ZcjN4YlagCIMgEY6UPIHKygd878uNId1TofsJ8Vsp7swNQBxv4qzh8HRdPwr4-NhglDZiOanMhEhHCIA__">
+</head>
+<style>
+  :root {
+    --bg-color: #fdfdfd;
+    --text-color: #333;
+    --main-color: #754ef9;
+    --white-color: #fdfdfd;
+    --shadow-color: rgba(0, 0, 0, .2);
+}
+  .testimonial-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 5rem 1rem;
+}
+
+.testimonial-container .testimonial-wrapper {
+    position: relative;
+    max-width: 90rem;
+    width: 100%;
+    padding: 5rem;
+}
+
+.testimonial-wrapper .testimonial-box {
+    padding: 1rem;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.testimonial-content .testimonial-slide {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 46rem; 
+    background: var(--bg-color);
+    border-radius: 2rem;
+    box-shadow: 0 .1rem .5rem var(--shadow-color);
+    padding: 3rem 5rem;
+    border-top: .8rem solid var(--main-color);
+    border-bottom: .8rem solid var(--main-color);
+}
+
+
+.testimonial-slide img {
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .5rem solid var(--bg-color);
+    outline: .5rem solid var(--main-color);
+}
+
+.testimonial-slide h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+span{
+  font-size: 1rem;
+  margin-bottom: 1.1rem ;
+}
+.testimonial-slide p {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.testimonial-box .swiper-button-next,
+.testimonial-box .swiper-button-prev {
+    color: var(--main-color);
+}
+
+.testimonial-box .swiper-button-next {
+    right: 0;
+}
+
+.testimonial-box .swiper-button-prev {
+    left: 0;
+}
+
+.testimonial-box .swiper-pagination-bullet {
+    background: rgba(0, 0, 0, .8);
+}
+
+.testimonial-box .swiper-pagination-bullet-active {
+    background: var(--main-color);
+}
+@media (max-width: 840px) {
+
+    .testimonial-container .testimonial-wrapper {
+        padding: 5rem 0;
+    }
+
+    .testimonial-content .testimonial-slide {
+        min-height: 54rem;;
+        max-height: 54rem;;
+        padding: 3rem 2rem;
+        overflow: hidden;
+    }
+
+    .testimonial-box .swiper-button-next,
+    .testimonial-box .swiper-button-prev {
+        display: none;
+    }
+    .testimonial-slide p {
+    font-size: 1.1rem;
+    text-align: left;
+}
+}
+#preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #0a0a0a;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .preloader-text {
+      color: #00ff99;
+      font-size: 2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #00ff99;
+      width: 0;
+      animation: typing 1s steps(10) forwards, blink 0.5s step-end infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 10ch; } /* "Compilemit" has 10 characters */
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+</style>
+<div id="preloader">
+  <div class="preloader-text">Compilemit</div>
+</div>
+  <!-- NavBar fetched from js -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>CompileMIT</h1>
+      <h3>| CODE · CREATE · CONQUER |</h3> <br>
+      <p>Nepal’s premier student tech community at Model Institute of Technology (MIT) College, Kathmandu — where innovation, collaboration, and growth
+        come together.</p>
+      <a href="#members"> <button class="join-btn">Get Started <i class="fas fa-arrow-right"></i></button></a>
+    </div>
+  </section>
+  
+  <!-- Members -->
+  <section class="members-section" id="members">
+    <h2>Meet Our Team</h2>
+    <div class="members-grid">
+      <div class="member-card">
+        <img src="https://media-hosting.imagekit.io/85f1d88bc78d4e9b/ashim.jpeg?Expires=1839304302&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FVLXOvM47OOinvwynhm1IpsTmwgV8HeScCVw5uyq6AaGfQtSZoS3cikspjiN-VeniauClpSu5zp9XCrsotHWE0ivvGppklpc0Dsp9b8EKbCgTuEUB4i5CkYaRHmU7nYLic0Y4dqxiB-xmWUsg-ipnJTZz2ymY1D70KKLv7casQqZrAsgZtZpwiJ8BXwzu5cElbRijz7fu-f2T3mCpVOjxCvdleIsZvYiaVJjg4NQLTtfviPyHRjnTwnprC78BSOuQRW1GndWuL5wCozWt9Ya38WhbmO3uZFi~zf2u4ha4E6CKMewBOvHe--JDewp6NGIYGoQQTjzXrj1yrhBkMWRCg__" alt="Member"
+          class="member-image">
+        <h4>Asim Balami</h4>
+        <p>Club Head</p>
+        <div class="social-links">
+          <a target="_blank" href="https://www.linkedin.com/in/asim-balami-52b0b832a/"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#"><i class="fab fa-github"></i></a> -->
+          <a target="_blank" href="https://www.instagram.com/_asim_balami122/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="members-grid">
+      <div class="member-card">
+        <img src="https://media-hosting.imagekit.io/3f20ed694c7d4c27/bishowdeep.jpg?Expires=1839296860&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=evVbcdStK6T~FBS6HEouK4m45P1BjJtIXTqT-crnleOBrenmHmcH0XNM3THS5oHuxVoM7B5ft5kiVxMQ464-KoTYmR1baN7H2J1kPaMUhHhKfvcoQAANGRepFk-3B2sicLxOhs8zwbIz2aimpM7A4oY093y1b8yLDSkwK2Vw9mFjiW9R-~~l7gYG7hZowfcM0G-Ddy1-OURTZSkNLy4qUVX8iCECdUB~rcC~XZ0kWz5wiBDS1110e1yc~-n~77CfbLXb~gVMcbbyL2yH3r~a4OSO~POwrLCaWKZYX-5YOe7OWhBsVIfN5Sb6KfPIY9HNU6Hv2TfYXS46Cda5x~q4-g__" alt="Member"
+          class="member-image">
+        <h4>Bishowdeep Sharma</h4>
+        <p>Tech Lead</p>
+        <div class="social-links">
+          <!-- <a target="_blank" href="https://www.instagram.com//"><i class="fab fa-linkedin"></i></a> -->
+          <a target="_blank" href="https://github.com/Bishowdeep"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://www.instagram.com/bishow_deep/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="member-card">
+        <img src="https://media-hosting.imagekit.io/fa4f1cbe5be64d2b/nirmal.jpeg?Expires=1839484893&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=1~faFh5Hf5VQ5fdCT7zfc~WCoZ2ZwDqdky~kkK9v5BxXaT~2hCu69a5HNdMdDI92awkw1j-p7qM9OVFagpnXw6rVmiM-GIf5XLoN1qFX-~krxdQsyiXmMomfLQWCxESDdMiNm2cyYLLP-yBqTPs1IIx8sCaFANwxrftCzEsV8r1HvQuTrMkU171rExVKF1seWksfKglu6rZU70gawyR4K18~v-T7s4hdm7Hfo3Jb3z11haE7okixd~QBokKw4PAIHOvFggM1YINYbAbGOMOpoFexodQ7EsG1I-G0BnIoFeJkLMd7I4iksOSyYTdmJzi4IiJCXpeEPdjjHGWbQqLe9w__" alt="Member"
+          class="member-image">
+        <h4>Nirmal Basyal</h4>
+        <p>Web Manager</p>
+        <div class="social-links">
+          <a target="_blank" href="https://www.linkedin.com/in/nirmalbasyal/"><i class="fab fa-linkedin"></i></a>
+          <a target="_blank" href="https://github.com/Nirmal46"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://www.instagram.com/nirmal__basyal/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="member-card">
+        <img src="https://media-hosting.imagekit.io/ee0099be7c6940fa/bandhana.png?Expires=1839484249&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=XxyM4SDU5q0oinAJ19zojlQfKBapqwicrjbhMEL2sa44-u7RamKb~UFEKSIBgLYjWx8s~NTOgZ-QO60l9PGafcET4bLkIP8ZMIBm1Umtw9GUvxPza-Tw4e94TTTZq4QXKHAAI3a0yS9sBlIu4N83NPbGWPPlg8F0x5Qb7fQg-QTmusHUFP~nSkEQE6gxe6WQ1LNUkpo0HOgiC3boOscsreKLJwxWWSfBQyc6S2c56vfIce0e5JJ-4YT~3SVlYJ1WRGeiZUe6C33N4LTBNnRXevOGaJeyw1Yz5c7rHugWwbouGT9aZCy3A~Vm7sO5i-eqeHXJLanak70h9Ryt0NSZ2A__" alt="Member"
+          class="member-image">
+        <h4>Bandana Pandey</h4>
+        <p>Treasurer</p>
+        <div class="social-links">
+          <!-- <a target="_blank" href="#"><i class="fab fa-linkedin"></i></a> -->
+          <!-- <a target="_blank" href="#"><i class="fab fa-github"></i></a> -->
+          <a target="_blank" href="https://www.instagram.com/bandanadiary_1/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="members-grid">
+      <div class="member-card">
+        <img src="https://media-hosting.imagekit.io/b7e29bde94ed4315/uchit.jpg?Expires=1839296860&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qjQSfouqqK7t1c3J-qW23hFEpwIJwuG-VM3EG2SUFM5Fox5rEpchIpxyDwngNeDQFRoqBChcknX8RY5E400ULlli-11Fo9K3UsK447kBfdgGPzfhudMxmrb8i5i54zp0e5-YK9g-tTmmk67-gX7O7c0x1IR-~SL23wvebeAhtOJL4ml4fGJuni1IPEdrfiyfA1ON0XiazSt7emxQCwunuk-vyTUkkqV09JlwZLbq4l4AmQ7QsnRpGoOQqGfyeecYvXsvXBn7TZVwKb55~HVWTWUAWBFb-ZNSy8WPah-mAeciPmZ3O-ITWoqI7Xy1qKwrGLrR3fMk3iRxr40tzMqWpg__" alt="Member"
+          class="member-image">
+        <h4>Uchit Joshi</h4>
+        <p>Public Relations(PR) Manager</p>
+        <div class="social-links">
+          <a target="_blank" href="https://www.linkedin.com/in/uchit-joshi-5bb311286/"><i class="fab fa-linkedin"></i></a>
+          <a target="_blank" href="https://github.com/uchitjoshi?tab=overview&from=2025-04-01&to=2025-04-17"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://www.instagram.com/uchitjoshi.4/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="member-card">
+        <img src="https://media-hosting.imagekit.io/3ba7780be81348f3/sangam.jpg?Expires=1839296860&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0HDrie1qakGCTkk-4fz0mbmQiMlMsQXp0gADNT1yZYT49MOzHH6G7JVTydFAjO2pkmmmpAvl0r8jNYGKD16EPve43pa1p7~Y4ZppgskGNSSm3jMg7L4g0V5b8i-WhGpp-xhEEMytpGd6gdX2eaYqFv1TVr5m8ost6fw15Q0N3HGi5TghO9sKB~I0-5or0EGu2NsNe2Hvo9vCGonLLt3VIzP6-PZP0xs2W1WpblZZ3xshlZsQso0~jhkijehF6qM2pXCK27xV1ObKviRKyh8PNQRpr7GJdRFM-FiARFcLLazI7bwn9wQL4UnzXiKyreJJIf2WwZ5lXZWKMpUiNCDxLw__" alt="Member"
+          class="member-image">
+        <h4>Sangam Pandey</h4>
+        <p>Project Manager</p>
+        <div class="social-links">
+          <a target="_blank" href="https://www.linkedin.com/in/sangam-pandey-103893351/ "><i class="fab fa-linkedin"></i></a>
+          <a target="_blank" href="https://github.com/sangam-in"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://www.instagram.com/sangam_enthu/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="member-card">
+        <img src="https://media-hosting.imagekit.io/0b3f6b758f79444a/prashanna.jpg?Expires=1839296860&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ACmW3GHIYc-61Jarw0KZVJVa8Ls04xjzNPTmkfhE07x3Gl69gBk1uLDspEuLYnKR50zgs92PbM0XY37slx82oBMQ-HlFshTl19rGKcoryIXG8v7w7DefPrKZnWWxjTXtBb665lGG-EtjotRjpl3MBm4kJ-815hDTYYldWsI9EDHIqB91mCZ68~6YhozPrOe5whAjxwER~Q-ItYNVIDbL1eR3s0SxI88HUAHKs5RSpmdT6b1i05VYQNd-wRxmcugS~Fnf~rlimSbRgC3slVpLFV~wkEg4IiOOn~zel7SmyIhrreB0V8vPm1WnRCtHJoBHBD7vWT~F9hTUV7eZIi-S5g__" alt="Member"
+          class="member-image">
+        <h4>Prasanna Karki</h4>
+        <p>Club Activist</p>
+        <div class="social-links">
+          <a target="_blank" href="https://www.linkedin.com/in/prasanna-karki-324a22342/"><i class="fab fa-linkedin"></i></a>
+          <a target="_blank" href="https://github.com/Prasan55"><i class="fab fa-github"></i></a>
+          <a target="_blank" href="https://www.instagram.com/prash_541/"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Events -->
+  <section class="events" id="events">
+    <h2>Events</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-users feature-icon"></i>
+        <!-- <i class="fas fa-rocket feature-icon"></i> -->
+        <h3>Women In IT</h3>
+        <p>
+          <img src="https://media-hosting.imagekit.io/b3316f230e9c4d9d/WIIT.png?Expires=1839304913&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=D5cOAGcmreqEmthITn1gl3ugDosHyw8Mi7PjYsqM7usXl3xBu3taoPmG02samWTZ7-aMro1MblwvElmMbOaXqNYC~kOsj6g-6LNATavtWDOBTPcyhxdOqxIfAwIjfIfI6op6L9LsfIt11uT4BYrEWKF5GI1lToYO9ZmL9RuUxER6yLk7GLXadS8d7knsoZaU-xIbZ4CygX72Fb7IXO7sskdnhbolNySwkcn7gDgv0ckLW5ahtqr4mKx6fN1nPaw2Nu6CCwNcdqm4JigfjWmSQc7yjsFerGN9DrtQaSMIWQ5zyuZQC8AjgW7SF9HSx9-Q9e~kynSJEOUYbPYKVpYPdA__" alt="picture">
+          An inspiring initiative to empower and uplift women in tech. #WIIT2025 👩‍💻
+        </p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-users feature-icon"></i>
+        <!-- <i class="fas fa-rocket feature-icon"></i> -->
+        <h3>MIT Extravaganza</h3>
+        <p>
+          <img src="https://media-hosting.imagekit.io/e55f46208b4e41ff/mit_exv.jpg?Expires=1839304913&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=2A-tl4284u8Dz7gF2uQ74Z6y2Drc-~LwaUcv9-pAE9KRiUk88hchrJFLP8P0JFfWEyububWeP~kkqvzc2eK-p0mm5UMvrhzGnTcYAwN1kX0lzXHPsVj6LQkp2CeDqiXbUNzRphB2tQcO0uB-JQBtjF6OB7tMafvhSwKduai-1zeNXyL2IXJRS7KyOjARSazDcVT2IHNoGuWa3mlneH9LXL1d2lP0CIa18xAVSjfeoAfM3J-SnABL5a9N58C-P9UcxY2n54j60pRCVMKuR4LjQtg5zbiNn17XD8SmQCPX39jeXMzWSwhQf2prHMgqe3eAaJDWAcRODdydO1LeUR2bJA__" alt="picture">
+          An unforgettable night of energy, talent, and pure magic! ✨ #Extravaganza2025🎭🎉
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <!-- <i class="fas fa-rocket feature-icon"></i> -->
+        <i class="fas fa-users feature-icon"></i>
+        <h3>Other Events</h3>
+
+        <p>
+          <img src="https://media-hosting.imagekit.io/88d41053b1cb40b9/CS.png?Expires=1839304913&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ezJF~0A3P45PP3ASZTb4HJJEo42MAMgt7m3GtBeXhQwJ9rdP9cMyLYCNfRRlQG9iwtEcMvaBugM3mv1vtSXqk~u0OgbNGb7e3mfsYZlabFjXaC~uoGACrgWj3uIcZSimXBlN48NrFjNkG4N8iZdagR-fedbLJgwt0Fc-TQQH7-9QDmbpeZxkle0O7nybwNZrBOoB4GByNlhOYdcC0SQ9LbMA~uuc3NRvCzqto3jk80-XCokTBfli0YPUHieM0ejh3ZGLMw2TKWB2bWMOzY3FaWBfFm5htvWmnz5RGzghoWztPyrPygLgTdUKCQ~cwcBO8g19NW8xWeF3E0m~2mrMlg__" alt="picture">
+          More exciting events coming soon!
+        </p>
+      </div>
+
+    </div>
+  </section>
+  
+  <!-- Testimonial Section -->
+<section class="testimonial-container" id="testimonial">
+  <h2 class="heading">Valuable Testimonial</h2>
+
+  <div class="testimonial-wrapper">
+    <div class="testimonial-box mySwiper">
+      <div class="testimonial-content swiper-wrapper">
+
+        <!-- Slide 1 -->
+        <div class="testimonial-slide swiper-slide">
+          <img src="https://media-hosting.imagekit.io/85f1d88bc78d4e9b/ashim.jpeg?Expires=1839304302&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=FVLXOvM47OOinvwynhm1IpsTmwgV8HeScCVw5uyq6AaGfQtSZoS3cikspjiN-VeniauClpSu5zp9XCrsotHWE0ivvGppklpc0Dsp9b8EKbCgTuEUB4i5CkYaRHmU7nYLic0Y4dqxiB-xmWUsg-ipnJTZz2ymY1D70KKLv7casQqZrAsgZtZpwiJ8BXwzu5cElbRijz7fu-f2T3mCpVOjxCvdleIsZvYiaVJjg4NQLTtfviPyHRjnTwnprC78BSOuQRW1GndWuL5wCozWt9Ya38WhbmO3uZFi~zf2u4ha4E6CKMewBOvHe--JDewp6NGIYGoQQTjzXrj1yrhBkMWRCg__" alt="Asim Balami">
+          <h3>Asim Balami</h3>
+          <span>Club Head</span>
+          <p>"Being the President of CompileMIT has been a transformative experience. It’s helped me grow as a leader, improve my communication skills, and turn ideas into action. Organizing events, leading a passionate team, and connecting with fellow tech enthusiasts has not only boosted my confidence but also strengthened my career path in IT."</p>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide swiper-slide">
+          <img src="https://media-hosting.imagekit.io/3f20ed694c7d4c27/bishowdeep.jpg?Expires=1839296860&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=evVbcdStK6T~FBS6HEouK4m45P1BjJtIXTqT-crnleOBrenmHmcH0XNM3THS5oHuxVoM7B5ft5kiVxMQ464-KoTYmR1baN7H2J1kPaMUhHhKfvcoQAANGRepFk-3B2sicLxOhs8zwbIz2aimpM7A4oY093y1b8yLDSkwK2Vw9mFjiW9R-~~l7gYG7hZowfcM0G-Ddy1-OURTZSkNLy4qUVX8iCECdUB~rcC~XZ0kWz5wiBDS1110e1yc~-n~77CfbLXb~gVMcbbyL2yH3r~a4OSO~POwrLCaWKZYX-5YOe7OWhBsVIfN5Sb6KfPIY9HNU6Hv2TfYXS46Cda5x~q4-g__" alt="Bishowdeep Sharma">
+          <h3>Bishowdeep Sharma</h3>
+          <span>Tech Lead</span>
+          <p>"This community helped me grow as a developer. The events and mentorship are amazing!"</p>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide swiper-slide">
+          <img src="https://media-hosting.imagekit.io/fa4f1cbe5be64d2b/nirmal.jpeg?Expires=1839484893&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=1~faFh5Hf5VQ5fdCT7zfc~WCoZ2ZwDqdky~kkK9v5BxXaT~2hCu69a5HNdMdDI92awkw1j-p7qM9OVFagpnXw6rVmiM-GIf5XLoN1qFX-~krxdQsyiXmMomfLQWCxESDdMiNm2cyYLLP-yBqTPs1IIx8sCaFANwxrftCzEsV8r1HvQuTrMkU171rExVKF1seWksfKglu6rZU70gawyR4K18~v-T7s4hdm7Hfo3Jb3z11haE7okixd~QBokKw4PAIHOvFggM1YINYbAbGOMOpoFexodQ7EsG1I-G0BnIoFeJkLMd7I4iksOSyYTdmJzi4IiJCXpeEPdjjHGWbQqLe9w__" alt="Nirmal Basyal">
+          <h3>Nirmal Basyal</h3>
+          <span>Web Manager</span>
+          <p>"Being the Web Manager for CompileMIT has been a fulfilling experience, allowing me to contribute to a community focused on collaboration, innovation, and growth. This role has enhanced my technical skills and provided valuable insights into teamwork and leadership."</p>
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="testimonial-slide swiper-slide">
+          <img src="https://media-hosting.imagekit.io/ee0099be7c6940fa/bandhana.png?Expires=1839484249&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=XxyM4SDU5q0oinAJ19zojlQfKBapqwicrjbhMEL2sa44-u7RamKb~UFEKSIBgLYjWx8s~NTOgZ-QO60l9PGafcET4bLkIP8ZMIBm1Umtw9GUvxPza-Tw4e94TTTZq4QXKHAAI3a0yS9sBlIu4N83NPbGWPPlg8F0x5Qb7fQg-QTmusHUFP~nSkEQE6gxe6WQ1LNUkpo0HOgiC3boOscsreKLJwxWWSfBQyc6S2c56vfIce0e5JJ-4YT~3SVlYJ1WRGeiZUe6C33N4LTBNnRXevOGaJeyw1Yz5c7rHugWwbouGT9aZCy3A~Vm7sO5i-eqeHXJLanak70h9Ryt0NSZ2A__" alt="Bandana Pandey">
+          <h3>Bandana Pandey</h3>
+          <span>Treasurer</span>
+          <p>"Serving as the Treasurer of Compile MIT has been a transformative experience for me. It is a platform where I have developed essential skills in financial management, event coordination, and leadership. It has allowed me to apply my knowledge in real-world scenarios and build greater confidence."</p>
+        </div>
+
+        <!-- Slide 5 -->
+        <div class="testimonial-slide swiper-slide">
+          <img src="https://media-hosting.imagekit.io/b7e29bde94ed4315/uchit.jpg?Expires=1839296860&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qjQSfouqqK7t1c3J-qW23hFEpwIJwuG-VM3EG2SUFM5Fox5rEpchIpxyDwngNeDQFRoqBChcknX8RY5E400ULlli-11Fo9K3UsK447kBfdgGPzfhudMxmrb8i5i54zp0e5-YK9g-tTmmk67-gX7O7c0x1IR-~SL23wvebeAhtOJL4ml4fGJuni1IPEdrfiyfA1ON0XiazSt7emxQCwunuk-vyTUkkqV09JlwZLbq4l4AmQ7QsnRpGoOQqGfyeecYvXsvXBn7TZVwKb55~HVWTWUAWBFb-ZNSy8WPah-mAeciPmZ3O-ITWoqI7Xy1qKwrGLrR3fMk3iRxr40tzMqWpg__" alt="Uchit Joshi ">
+          <h3>Uchit Joshi</h3>
+          <span>PR Manager</span>
+          <p>"As the PR Manager at CompileMIT, I take pride in building strong connections and promoting meaningful collaborations. This role has helped me enhance my communication skills, strengthen team relationships, and represent the club with confidence and creativity."</p>
+        </div>
+
+        <!-- Slide 6 -->
+        <div class="testimonial-slide swiper-slide">
+          <img src="https://media-hosting.imagekit.io/3ba7780be81348f3/sangam.jpg?Expires=1839296860&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=0HDrie1qakGCTkk-4fz0mbmQiMlMsQXp0gADNT1yZYT49MOzHH6G7JVTydFAjO2pkmmmpAvl0r8jNYGKD16EPve43pa1p7~Y4ZppgskGNSSm3jMg7L4g0V5b8i-WhGpp-xhEEMytpGd6gdX2eaYqFv1TVr5m8ost6fw15Q0N3HGi5TghO9sKB~I0-5or0EGu2NsNe2Hvo9vCGonLLt3VIzP6-PZP0xs2W1WpblZZ3xshlZsQso0~jhkijehF6qM2pXCK27xV1ObKviRKyh8PNQRpr7GJdRFM-FiARFcLLazI7bwn9wQL4UnzXiKyreJJIf2WwZ5lXZWKMpUiNCDxLw__" alt="Sangam Pandey">
+          <h3>Sangam Pandey</h3>
+          <span>Project Manager</span>
+          <p>"As the Project Manager at CompileMIT, I've had the opportunity to take on meaningful tasks that have truly shaped my learning journey. Each project has helped me stay on track and gain hands-on experience, steering my career in the right direction."</p>
+        </div>
+
+        <!-- Slide 7 -->
+        <div class="testimonial-slide swiper-slide">
+          <img src="https://media-hosting.imagekit.io/0b3f6b758f79444a/prashanna.jpg?Expires=1839296860&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=ACmW3GHIYc-61Jarw0KZVJVa8Ls04xjzNPTmkfhE07x3Gl69gBk1uLDspEuLYnKR50zgs92PbM0XY37slx82oBMQ-HlFshTl19rGKcoryIXG8v7w7DefPrKZnWWxjTXtBb665lGG-EtjotRjpl3MBm4kJ-815hDTYYldWsI9EDHIqB91mCZ68~6YhozPrOe5whAjxwER~Q-ItYNVIDbL1eR3s0SxI88HUAHKs5RSpmdT6b1i05VYQNd-wRxmcugS~Fnf~rlimSbRgC3slVpLFV~wkEg4IiOOn~zel7SmyIhrreB0V8vPm1WnRCtHJoBHBD7vWT~F9hTUV7eZIi-S5g__" alt="Prasanna Karki">
+          <h3>Prasanna Karki</h3>
+          <span>Club Activist</span>
+          <p>"Being a part of CompileMIT has been one of the most rewarding experiences of my academic journey. As a club activist, I’ve had the opportunity to not only grow my technical skills but also collaborate with like-minded peers who are just as passionate about technology and innovation as I am."</p>
+        </div>
+
+      </div>
+
+      <!-- Swiper Controls -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- Join -->
+  <section class="cta-section" id="join">
+    <h2>Ready to Join Our Community?</h2>
+    <p>Start your tech journey with us today</p>
+    <!-- <a href="#"> <button class="join-btn" id="join" onclick="join()">Apply Now <i
+          class="fas fa-paper-plane"></i></button></a> -->
+          <a href="register"> <button class="join-btn" id="join">Apply Now <i
+            class="fas fa-paper-plane"></i></button></a>
+  </section>
+  <!-- Footer -->
+  <!-- <footer>
+    <div class="social-media">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <p>&copy; 2024 CompileMIT Club. All rights reserved.</p>
+  </footer> -->
+
+  <script src="script.js"></script>
+  <script>
+    const container = document.getElementById('testimonialContainer');
+    const cards = container.querySelectorAll('.testimonial-card');
+    const dotsContainer = document.getElementById('dots');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentIndex = 0;
+
+    function createDots() {
+      cards.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('dot');
+        if (i === 0) dot.classList.add('active');
+        dot.dataset.index = i;
+        dot.addEventListener('click', (e) => {
+          const index = parseInt(e.target.dataset.index);
+          cards[index].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+        });
+        dotsContainer.appendChild(dot);
+      });
+    }
+
+    function updateDots(index) {
+      document.querySelectorAll('.dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const index = parseInt(entry.target.dataset.index);
+          currentIndex = index;
+          updateDots(index);
+        }
+      });
+    }, {
+      root: container,
+      threshold: 0.6
+    });
+
+    cards.forEach(card => observer.observe(card));
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        cards[currentIndex - 1].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < cards.length - 1) {
+        cards[currentIndex + 1].scrollIntoView({ behavior: 'smooth', inline: 'center' });
+      }
+    });
+
+    createDots();
+  </script>
+  <script>
+    const menuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    // Toggle Dark Mode
+    darkModeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+      darkModeToggle.innerHTML = isDarkMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    });
+  </script>
+  <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+</script>
+<script>
+  setTimeout(() => {
+    document.getElementById('preloader').style.display = 'none';
+    document.getElementById('main-content').classList.add('show');
+  }, 1300); // match typing duration
+</script>
+</body>
+
+</html>
